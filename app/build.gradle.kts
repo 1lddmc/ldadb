@@ -4,8 +4,9 @@ plugins {
 }
 
 android {
-    namespace = "com.sky22333.skyadb"
+    namespace = "com.LDadb"
     compileSdk = 37
+
     val ciVersionCode = providers.environmentVariable("VERSION_CODE").map { it.toInt() }.orNull
     val ciVersionName = providers.environmentVariable("VERSION_NAME").orNull
     val signingStoreFile = providers.environmentVariable("SIGNING_STORE_FILE").orNull
@@ -18,11 +19,16 @@ android {
         !keyPasswordValue.isNullOrBlank()
 
     defaultConfig {
-        applicationId = "com.sky22333.skyadb"
+        applicationId = "com.LDadb"
         minSdk = 24
         targetSdk = 37
         versionCode = ciVersionCode ?: 10000
         versionName = ciVersionName ?: "1.0.0"
+
+        // 仅 64 位 ARM 架构
+        ndk {
+            abiFilters += listOf("arm64-v8a")
+        }
     }
 
     signingConfigs {
@@ -39,12 +45,9 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            // 关闭 R8 压缩 与 资源压缩
+            isMinifyEnabled = false
             isShrinkResources = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro",
-            )
             if (releaseSigningEnabled) {
                 signingConfig = signingConfigs.getByName("release")
             }

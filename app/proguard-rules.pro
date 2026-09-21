@@ -1,8 +1,8 @@
 -keepattributes SourceFile,LineNumberTable,*Annotation*,Signature,InnerClasses,EnclosingMethod,Exceptions
 -renamesourcefileattribute SourceFile
 
--keep class com.sky22333.skyadb.AdbManagerApplication { <init>(); }
--keep class com.sky22333.skyadb.MainActivity { *; }
+-keep class com.LDadb.AdbManagerApplication { <init>(); }
+-keep class com.LDadb.MainActivity { *; }
 
 -keep class com.flyfishxu.kadb.** { *; }
 -keep class com.flyfishxu.** { *; }

@@ -1,4 +1,4 @@
-# sky adb
+# LD adb
 
 <p align="center">
   <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
@@ -6,7 +6,7 @@
        width="200">
 </p>
 
-sky adb 是一款运行在 Android 手机上的 ADB 管理工具，用于通过 WiFi ADB / Wireless Debugging 管理手机、平板、电视和盒子。
+LD adb 是一款运行在 Android 手机上的 ADB 管理工具，用于通过 WiFi ADB / Wireless Debugging 管理手机、平板、电视和盒子。
 
 ## 功能特性
 
@@ -29,7 +29,7 @@ sky adb 是一款运行在 Android 手机上的 ADB 管理工具，用于通过 
 ## 如何使用
 
 1. 在目标设备开启开发者选项和无线调试。
-2. 在 sky adb 中输入目标设备 IP 和 ADB 端口，或先使用无线调试配对。
+2. 在 LD adb 中输入目标设备 IP 和 ADB 端口，或先使用无线调试配对。
 3. 连接成功后进入设备详情页，使用应用管理、APK 安装、文件管理、截图、遥控器、屏幕镜像或 Shell 等功能。
 4. 常用设备会自动保存到最近设备列表，后续可快速回填连接信息。
 

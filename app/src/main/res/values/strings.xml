@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">sky adb</string>
+    <string name="app_name">LD adb</string>
 
     <!-- Language -->
     <string name="language_follow_system">System</string>
@@ -365,7 +365,7 @@
     <string name="repo_usb_device_disconnected">USB device disconnected</string>
     <string name="repo_usb_device_disconnected_suggestion">Reconnect the OTG cable and refresh the USB device list on the home screen.</string>
     <string name="repo_usb_permission_missing">USB permission not granted</string>
-    <string name="repo_usb_permission_missing_suggestion">Allow sky adb to access this USB device in the system dialog.</string>
+    <string name="repo_usb_permission_missing_suggestion">Allow LD adb to access this USB device in the system dialog.</string>
     <string name="repo_usb_mode_unknown">Unable to detect the USB device mode</string>
     <string name="repo_usb_mode_unknown_suggestion">Make sure the target device is in ADB or Fastboot mode.</string>
     <string name="repo_not_fastboot">Not currently a Fastboot connection</string>
@@ -586,7 +586,7 @@
 
     <!-- ViewModel operation status: Home -->
     <string name="home_usb_permission_denied">USB permission denied</string>
-    <string name="home_usb_permission_hint">Please allow sky adb to access this USB device in the system dialog, then retry.</string>
+    <string name="home_usb_permission_hint">Please allow LD adb to access this USB device in the system dialog, then retry.</string>
     <string name="home_autofill_discovered">Filled in the discovered address. Please confirm before connecting.</string>
     <string name="home_pairing_success_ip_filled">Paired successfully, IP filled in. Confirm the connect port (\"IP address &amp; port\" on the wireless debugging page) before connecting.</string>
     <string name="home_disconnected">Disconnected</string>

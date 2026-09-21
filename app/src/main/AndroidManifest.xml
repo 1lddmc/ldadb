@@ -32,7 +32,7 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Skyadb">
+        android:theme="@style/Theme.LDadb">
 
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
@@ -48,7 +48,7 @@
             android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize|keyboardHidden"
             android:enableOnBackInvokedCallback="true"
             android:exported="true"
-            android:theme="@style/Theme.Skyadb">
+            android:theme="@style/Theme.LDadb">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

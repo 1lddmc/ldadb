@@ -1,10 +1,10 @@
-# sky adb 项目文档
+# LD adb 项目文档
 
-本文档基于当前源码实际状态整理，用于说明 sky adb 的功能范围、项目结构、开发规范、维护规范和性能要求。后续开发应在功能或工程结构变化后同步更新本文档。
+本文档基于当前源码实际状态整理，用于说明 LD adb 的功能范围、项目结构、开发规范、维护规范和性能要求。后续开发应在功能或工程结构变化后同步更新本文档。
 
 ## 项目定位
 
-sky adb 是一款运行在 Android 手机上的全中文 ADB 管理工具。它通过 WiFi ADB / Wireless Debugging 连接并管理目标 Android 设备，适用于手机、平板、电视、盒子等设备的日常维护。
+LD adb 是一款运行在 Android 手机上的全中文 ADB 管理工具。它通过 WiFi ADB / Wireless Debugging 连接并管理目标 Android 设备，适用于手机、平板、电视、盒子等设备的日常维护。
 
 当前交付目标是 Android App，未来仅做少量架构预留，方便后续评估 Windows 端支持，不在当前版本中引入复杂跨平台工程。
 
@@ -48,7 +48,7 @@ sky adb 是一款运行在 Android 手机上的全中文 ADB 管理工具。它�
 
 ## 运行范围
 
-- 运行 sky adb 的设备：最低 Android 7.0，API 24。
+- 运行 LD adb 的设备：最低 Android 7.0，API 24。
 - 编译目标：compileSdk 37，targetSdk 37。
 - Android 17 局域网：targetSdk 37 需声明并运行时申请 `ACCESS_LOCAL_NETWORK`，用于 mDNS 发现、网段扫描和 WiFi ADB 连接。
 - 被连接设备：以目标设备是否支持 ADB over TCP / Wireless Debugging 为准。Android 11+ 推荐使用无线调试配对；传统 WiFi ADB 设备通常使用 `5555` 端口。
@@ -57,7 +57,7 @@ sky adb 是一款运行在 Android 手机上的全中文 ADB 管理工具。它�
 ## 项目结构
 
 ```text
-skyadb/
+LDadb/
 ├── .github/
 │   └── workflows/
 │       └── android-ci.yml                 # GitHub Actions：测试、lint、签名构建、发布 Release APK
@@ -66,7 +66,7 @@ skyadb/
 │   └── src/main/
 │       ├── AndroidManifest.xml            # 权限、应用入口、图标、应用名
 │       ├── assets/scrcpy/scrcpy-server-v4.1 # 官方 scrcpy server 资产
-│       ├── java/com/sky22333/skyadb/
+│       ├── java/com/LDadb/
 │       │   ├── AdbManagerApplication.kt   # Application 初始化入口
 │       │   ├── AppServices.kt             # 当前实际使用的轻量服务容器
 │       │   ├── MainActivity.kt            # Compose Activity 入口
@@ -174,7 +174,7 @@ skyadb/
 
 ## UI 与交互规范
 
-- App 内所有可见文案必须使用简体中文，品牌名统一写作 `sky adb`。
+- App 内所有可见文案必须使用简体中文，品牌名统一写作 `LD adb`。
 - 使用 Material 3 作为基础，但要保持现代、扁平、克制、工具型产品风格。
 - 页面不能有粗糙默认感，按钮、卡片、输入框、状态徽章、列表间距必须统一。
 - 首页、设置页、设备页、Shell 页等长内容页面使用 `LazyColumn`，避免滚动不跟手。
